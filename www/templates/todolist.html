@@ -1,0 +1,66 @@
+<ion-view title="TodoList" class="has-header" >
+    <ion-content ng-controller="listController">
+        <ion-nav-buttons side="right">
+            <button class="button button-clear ion-plus-round" ng-click="showForm()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="left">
+            <button class="button button-clear ion-refresh" ng-click="getRecords()"></button>
+        </ion-nav-buttons>
+        <br/>
+        <!--<div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" ng-model="data" placeholder="Add Todo">
+            </label>
+            <div class="button button-assertive button-bar" ng-click="addTodoList()"> Add Todo</div>
+        </div>-->
+        <ion-list class="list">
+            <ion-item class="item" ng-repeat="item in getResults">{{$index+1}}. {{item.name}}
+                <ion-option-button class="button-calm" ng-click="dataCopy(item)">Edit</ion-option-button>
+                <ion-option-button class="button-assertive" ng-click="delete(item.id)">Delete</ion-option-button>
+            </ion-item>
+        </ion-list>
+
+        <!--Add--Todo-ITems-->
+        <script id="AddTodo.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-positive">
+                    <h1 class="title">Add Todo Item </h1>
+                    <button class="button button-clear button-primary" ng-click="add.hide()">Cancel</button>
+                </ion-header-bar>
+                <ion-content class="padding">
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">Todo</span>
+                            <input ng-model="data" type="text" placeholder="Add Todo">
+                        </label>
+                        <button class="button button-full button-positive" ng-click="addTodoList(data)">Add</button>
+                    </div>
+                </ion-content>
+            </ion-modal-view>
+        </script>
+
+
+
+
+        <!--end-->
+<!-- --------------------popup for update----------------->
+        <script id="modal.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-positive">
+                    <h1 class="title">Update Todo Item</h1>
+                    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+                </ion-header-bar>
+                <ion-content class="padding">
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">Todo</span>
+                            <input ng-model="newItem.name" type="text">
+                        </label>
+                        <button class="button button-full button-positive" ng-click="updateTodo()">Update</button>
+                    </div>
+                </ion-content>
+            </ion-modal-view>
+        </script>
+<!--end-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view title="Main" xmlns="http://www.w3.org/1999/html">
+    <ion-content class="has-header">
+        <div class="list list-inset" ng-controller="main">
+            <label class="item item-input">
+                <input type="text" placeholder="Username" ng-model="e">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="password">
+            </label>
+            <br/>
+            <button ng-click="login(e,password)" class="button button-block button-positive">Log In</button>
+
+        </div>
+       <!--<div class="list" ng-controller="main">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+               <input type="text" ng-model="e">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="password">
+            </label>
+            <button ng-click="login(e,password)" class="button button-bar button-positive text-center">Log In</button>
+        </div>-->
+    </ion-content>
+</ion-view>
