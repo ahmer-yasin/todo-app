@@ -21,6 +21,7 @@ starter.factory('storageFunc',function($localstorage,$state,$ionicLoading,$rootS
             console.log(response)
         }, function(response){
             console.log(response);
+            $ionicLoading.hide();
         });
     };
     var getRecords = function (func) {

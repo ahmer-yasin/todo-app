@@ -47,5 +47,11 @@ starter.config(function($stateProvider,$urlRouterProvider){
                     controller:'main'
 
                 })
+               .state('sign_up',{
+                   url:"/signup",
+                   templateUrl:"templates/signup.html",
+                   controller:'sign_up'
+
+               })
                 $urlRouterProvider.otherwise('/main')
      })

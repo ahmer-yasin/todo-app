@@ -49,6 +49,7 @@ C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\loginService.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\sdk-init.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\service.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\shred.bundle.js \
+C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\signUp.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\js\swagger.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\lib\ionic \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\lib\ionic\css \
@@ -126,5 +127,6 @@ C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\plugins\com.ionic.keybo
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\plugins\org.apache.cordova.device\www \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\plugins\org.apache.cordova.device\www\device.js \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\templates\main.html \
+C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\templates\signup.html \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\assets\www\templates\todolist.html \
 C:\Users\AHMER\Desktop\CRUD\platforms\android\ant-build\AndroidManifest.xml \

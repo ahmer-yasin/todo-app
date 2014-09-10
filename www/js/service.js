@@ -1,26 +1,28 @@
 starter.factory('storageFunc',function($localstorage,$state,$ionicLoading,$rootScope){
-    var email ="dxbadboys92@gmail.com";
-    var password ="ahmer1992";
+    var email ="sweet.sunrise90@gmail.com";
+    var password ="abc123";
     var todoList = '';
     var obj = {};
-    var login = function () {
+    var login = function (u,p) {
         $ionicLoading.show({template: 'Logging...'});
         var body = {
-            email: email,
-            password: password
+            email: u,
+            password: p
         };
         window.df.apis.user.login({body: body}, function (response) {
             if(typeof(response)=="object"){
                 console.log(typeof(response));
                 $localstorage.set("isLogged",true);
-                $rootScope.isLogged=true
+                $rootScope.isLogged=true;
                 $ionicLoading.hide();
                 $state.go('todo');
             }
             window.authorizations.add("X-DreamFactory-Session-Token", new ApiKeyAuthorization("X-Dreamfactory-Session-Token", response.session_id, 'header'));
             console.log(response)
         }, function(response){
+            $ionicLoading.hide();
             console.log(response);
+
         });
     };
     var getRecords = function (func) {
@@ -31,8 +33,7 @@ starter.factory('storageFunc',function($localstorage,$state,$ionicLoading,$rootS
             console.log(response)
             $ionicLoading.hide();
         }, function(response) {
-            console.log(response);
-            $scope.getResults = $scope.getErrorString(response);
+            console.log(getErrorString(response));
         });
     };
     var getErrorString = function(response){
