@@ -1,6 +1,4 @@
 starter.factory('storageFunc',function($localstorage,$state,$ionicLoading,$rootScope){
-    var email ="sweet.sunrise90@gmail.com";
-    var password ="abc123";
     var todoList = '';
     var obj = {};
     var login = function (u,p) {
