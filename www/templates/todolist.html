@@ -27,7 +27,7 @@
                             <span class="input-label">Todo</span>
                             <input ng-model="data" type="text" placeholder="Add Todo">
                         </label>
-                        <button class="button button-full button-positive" ng-click="addTodoList(data)">Add</button>
+                        <button class="button button-full button-positive" ng-click="addTodoList(data); data =''">Add</button>
                     </div>
                 </ion-content>
             </ion-modal-view>
