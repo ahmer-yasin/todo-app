@@ -3,7 +3,6 @@ starter.controller('listController',function($scope,$state,storageFunc,$ionicMod
         $state.go('main')
     }
     else{
-        $scope.data = "";
         $ionicModal.fromTemplateUrl('AddTodo.html', {
             scope: $scope
         }).then(function(modal) {
@@ -23,12 +22,12 @@ starter.controller('listController',function($scope,$state,storageFunc,$ionicMod
             storageFunc.getRecords($scope.test)
 
         };
-        $scope.getRecords();
-        $scope.addTodoList = function(){
-            storageFunc.AddTodo($scope.data);
+            $scope.getRecords();
+        $scope.addTodoList = function(data){
+            storageFunc.AddTodo(data);
             $scope.getRecords();
             $scope.add.hide();
-            $scope.$watch($scope.data);
+            //
         }
         $scope.showForm = function(){
             $scope.add.show();
@@ -44,13 +43,17 @@ starter.controller('listController',function($scope,$state,storageFunc,$ionicMod
         $scope.dataCopy = function(data){
             $scope.modal.show();
             $scope.newItem = angular.copy(data);
+            /*
+             $scope.show = true;
+             */
         };
         $scope.updateTodo = function(){
             storageFunc.updateTodo($scope.newItem);
             storageFunc.getRecords($scope.test);
             $scope.modal.hide();
+//      $scope.show = false;
+        }
 
-         }
         $scope.createContact = function(u) {
             $scope.modal.hide();
         };

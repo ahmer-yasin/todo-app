@@ -7,12 +7,6 @@
             <button class="button button-clear ion-refresh" ng-click="getRecords()"></button>
         </ion-nav-buttons>
         <br/>
-        <!--<div class="list list-inset">
-            <label class="item item-input">
-                <input type="text" ng-model="data" placeholder="Add Todo">
-            </label>
-            <div class="button button-assertive button-bar" ng-click="addTodoList()"> Add Todo</div>
-        </div>-->
         <ion-list class="list">
             <ion-item class="item" ng-repeat="item in getResults">{{$index+1}}. {{item.name}}
                 <ion-option-button class="button-calm" ng-click="dataCopy(item)">Edit</ion-option-button>
@@ -33,7 +27,7 @@
                             <span class="input-label">Todo</span>
                             <input ng-model="data" type="text" placeholder="Add Todo">
                         </label>
-                        <button class="button button-full button-positive" ng-click="addTodoList(data)">Add</button>
+                        <button class="button button-full button-positive" ng-click="addTodoList(data); data =''">Add</button>
                     </div>
                 </ion-content>
             </ion-modal-view>
